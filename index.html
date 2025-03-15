@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Explora el portafolio de Spyflow, desarrollador con experiencia en Python, C, JavaScript, HTML, PHP y CSS. Proyectos innovadores y soluciones tecnológicas personalizadas." />
+    <title>Spyflow | Portafolio de Desarrollo y Tecnología</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/styles/main.css" />
+    <script type="module" src="/src/main.ts" defer></script>
+  </head>
+  <body>
+    <div class="noise-overlay"></div>
+
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <a href="#home">Spy<span>flow</span></a>
+          </div>
+          <button class="mobile-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="nav-links">
+            <li><a href="#home" class="nav-link active">Inicio</a></li>
+            <li><a href="#about" class="nav-link">Sobre Mí</a></li>
+            <li><a href="#skills" class="nav-link">Habilidades</a></li>
+            <li><a href="#projects" class="nav-link">Proyectos</a></li>
+            <li><a href="#contact" class="nav-link">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero-section">
+        <div class="container">
+          <div class="hero-content">
+            <div class="hero-text">
+              <h1 class="fade-in">¡Hola! Soy <span class="highlight">Spyflow</span></h1>
+              <p class="subtitle fade-in">Tengo 20 años y me especializo en desarrollo con tecnologías como Python, C, JavaScript, HTML y PHP.</p>
+              <div class="hero-btns fade-in">
+                <a href="#projects" class="btn btn-primary">Ver Proyectos</a>
+                <a href="#contact" class="btn btn-secondary">Contactarme</a>
+              </div>
+            </div>
+            <div class="hero-terminal fade-in">
+              <div class="terminal-header">
+                <div class="terminal-buttons">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <div class="terminal-title">spyflow@terminal: ~</div>
+              </div>
+              <div class="terminal-body">
+                <div class="line">
+                  <span class="prompt">$</span> <span class="command">whoami</span>
+                </div>
+                <div class="line">Spyflow</div>
+                <div class="line">
+                  <span class="prompt">$</span> <span class="command">cat skills.txt</span>
+                </div>
+                <div class="line">Python, C, JavaScript, HTML, PHP, CSS</div>
+                <div class="line">
+                  <span class="prompt">$</span> <span class="command">./welcome.sh</span>
+                </div>
+                <div class="line">¡Bienvenido a mi portafolio!</div>
+                <div class="line cursor">
+                  <span class="prompt">$</span> <span class="command"></span><span class="cursor-blink">█</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="scroll-down">
+          <a href="#about">
+            <span class="arrow"></span>
+          </a>
+        </div>
+      </section>
+
+      <section id="about" class="about-section">
+        <div class="container">
+          <h2 class="section-title">Sobre Mí</h2>
+          <div class="about-content">
+            <div class="about-text">
+              <p>Soy un desarrollador apasionado por crear soluciones eficientes y elegantes a problemas complejos. Mi viaje en la programación comenzó por curiosidad y se ha convertido en mi pasión.</p>
+              <p>Me encanta aprender nuevas tecnologías y enfrentar desafíos que me permitan crecer profesionalmente. Mi objetivo es desarrollar aplicaciones que sean tanto funcionales como visualmente atractivas.</p>
+              <p>Constantemente estoy buscando formas de mejorar mis habilidades y mantenerme al día con las últimas tendencias en el mundo del desarrollo.</p>
+              <div class="about-buttons">
+                <a href="https://github.com/spyflow" target="_blank" class="btn btn-outline">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                  </svg>
+                  GitHub
+                </a>
+                <a href="https://cl.linkedin.com/in/spyflow" target="_blank" class="btn btn-outline">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                  LinkedIn
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="skills-section">
+        <div class="container">
+          <h2 class="section-title">Mis Habilidades</h2>
+          <div class="skills-container">
+            <div class="skill-card" data-skill="python">
+              <div class="skill-icon">
+                <img src="https://ext.same-assets.com/3284986684/2326286424.svg+xml" alt="Python logo">
+              </div>
+              <h3 class="skill-name">Python</h3>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 70%"></div>
+              </div>
+              <span class="skill-percentage">70%</span>
+            </div>
+
+            <div class="skill-card" data-skill="c">
+              <div class="skill-icon">
+                <img src="https://ext.same-assets.com/2608935947/4131773133.svg+xml" alt="C logo">
+              </div>
+              <h3 class="skill-name">C</h3>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%"></div>
+              </div>
+              <span class="skill-percentage">85%</span>
+            </div>
+
+            <div class="skill-card" data-skill="javascript">
+              <div class="skill-icon">
+                <img src="https://ext.same-assets.com/1269505813/3706775890.svg+xml" alt="JavaScript logo">
+              </div>
+              <h3 class="skill-name">JavaScript</h3>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 50%"></div>
+              </div>
+              <span class="skill-percentage">50%</span>
+            </div>
+
+            <div class="skill-card" data-skill="html">
+              <div class="skill-icon">
+                <img src="https://ext.same-assets.com/1940023948/243932442.svg+xml" alt="HTML logo">
+              </div>
+              <h3 class="skill-name">HTML</h3>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 67%"></div>
+              </div>
+              <span class="skill-percentage">67%</span>
+            </div>
+
+            <div class="skill-card" data-skill="php">
+              <div class="skill-icon">
+                <img src="https://ext.same-assets.com/1979851234/3392067078.svg+xml" alt="PHP logo">
+              </div>
+              <h3 class="skill-name">PHP</h3>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 81%"></div>
+              </div>
+              <span class="skill-percentage">81%</span>
+            </div>
+
+            <div class="skill-card" data-skill="css">
+              <div class="skill-icon">
+                <img src="https://ext.same-assets.com/1247191110/1935401123.svg+xml" alt="CSS logo">
+              </div>
+              <h3 class="skill-name">CSS</h3>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 62%"></div>
+              </div>
+              <span class="skill-percentage">62%</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="projects-section">
+        <div class="container">
+          <h2 class="section-title">Proyectos</h2>
+          <div class="projects-container">
+            <div class="project-card">
+              <div class="project-image">
+                <img src="https://ext.same-assets.com/292381660/1968600620.png" alt="Web Scraping Project">
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">Web Scraping</h3>
+                <p class="project-description">Es una página de películas que hace scraping para obtener la información de las películas y los links de visualización.</p>
+                <div class="project-disclaimer">
+                  <p>No me hago responsable por el uso indebido de la página.</p>
+                </div>
+                <div class="tech-stack">
+                  <span class="tech-icon">
+                    <img src="https://ext.same-assets.com/1940023948/243932442.svg+xml" alt="HTML" title="HTML">
+                  </span>
+                  <span class="tech-icon">
+                    <img src="https://ext.same-assets.com/1979851234/3392067078.svg+xml" alt="PHP" title="PHP">
+                  </span>
+                  <span class="tech-icon">
+                    <img src="https://ext.same-assets.com/1269505813/3706775890.svg+xml" alt="JavaScript" title="JavaScript">
+                  </span>
+                  <span class="tech-icon">
+                    <img src="https://ext.same-assets.com/1247191110/1935401123.svg+xml" alt="CSS" title="CSS">
+                  </span>
+                </div>
+                <div class="project-links">
+                  <a href="https://video.makatunga.uy/" class="btn btn-sm" target="_blank">Ver Proyecto</a>
+                  <a href="https://github.com/spyflow/firstry" class="btn btn-sm" target="_blank">Repositorio</a>
+                  <a href="https://peliculas.spyflow.link/dmca" class="btn btn-sm" target="_blank">DMCA</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-image">
+                <img src="https://ext.same-assets.com/2717859152/3440094824.png" alt="Discord Music Bot">
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">Discord Music Bot</h3>
+                <p class="project-description">Este es un simple bot de Discord para reproducir música de YouTube en un canal de voz. El bot está escrito en Python.</p>
+                <div class="project-disclaimer">
+                  <p>Este proyecto se ha interrumpido y ya no recibirá actualizaciones.</p>
+                </div>
+                <div class="tech-stack">
+                  <span class="tech-icon">
+                    <img src="https://ext.same-assets.com/3284986684/2326286424.svg+xml" alt="Python" title="Python">
+                  </span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/spyflow/musicbot" class="btn btn-sm" target="_blank">Repositorio</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section">
+        <div class="container">
+          <h2 class="section-title">Contactame</h2>
+          <div class="contact-content">
+            <div class="contact-text">
+              <p>¿Interesado en trabajar juntos? ¡Contáctame a través de mis redes sociales!</p>
+              <div class="social-links">
+                <a href="https://github.com/spyflow" target="_blank" class="social-link">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                  </svg>
+                  GitHub
+                </a>
+                <a href="https://cl.linkedin.com/in/spyflow" target="_blank" class="social-link">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                  LinkedIn
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <p>&copy; 2024 Spyflow. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
