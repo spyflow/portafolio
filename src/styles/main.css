@@ -1,13 +1,13 @@
 :root {
-  --color-bg: #0a0a0a;
-  --color-bg-accent: #111111;
-  --color-primary: #5865f2;
-  --color-primary-dark: #454fee;
-  --color-secondary: #31c48d;
-  --color-text: #f8f8f8;
-  --color-text-muted: #999999;
-  --color-border: #222222;
-  --color-danger: #e15151;
+  --color-bg: #1A1A2A;
+  --color-bg-accent: #2A2A3A;
+  --color-primary: #6A0DAD;
+  --color-primary-dark: #4B0082;
+  --color-secondary: #AF40E0; /* Light muted purple */
+  --color-text: #F0F0F0;
+  --color-text-muted: #A0A0B0;
+  --color-border: #3A3A4A;
+  --color-danger: #FF4D4D;
 
   --transition: all 0.3s ease;
 }
@@ -342,27 +342,24 @@ a:hover {
   bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
-  animation: bounce 2s infinite;
+  animation: bounce-vertical 2s infinite;
 }
 
-.scroll-down .arrow {
-  display: block;
-  width: 25px;
-  height: 25px;
-  border-right: 3px solid var(--color-primary);
-  border-bottom: 3px solid var(--color-primary);
-  transform: rotate(22.5deg); /* Ajustado a 22.5 grados, mitad entre 45 y 0 */
+.scroll-arrow-icon {
+  stroke: var(--color-primary);
+  width: 30px;
+  height: 30px;
 }
 
-@keyframes bounce {
+@keyframes bounce-vertical {
   0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0) rotate(22.5deg); /* Ajustado a 22.5 grados */
+    transform: translateY(0);
   }
   40% {
-    transform: translateY(-15px) rotate(22.5deg); /* Ajustado a 22.5 grados */
+    transform: translateY(-10px);
   }
   60% {
-    transform: translateY(-7px) rotate(22.5deg); /* Ajustado a 22.5 grados */
+    transform: translateY(-5px);
   }
 }
 
@@ -826,6 +823,10 @@ a:hover {
 
   .projects-container {
     grid-template-columns: 1fr;
+  }
+
+  .hero-terminal .terminal-body {
+    text-align: right;
   }
 }
 
