@@ -341,9 +341,13 @@ a:hover {
 .scroll-down {
   position: absolute;
   bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 30px; /* Set width to actual element width for margin auto centering */
+  left: 0; /* Set left to 0 for margin auto centering */
+  right: 0; /* Add right 0 for margin auto centering */
+  margin-left: auto; /* Add margin-left auto for centering */
+  margin-right: auto; /* Add margin-right auto for centering */
   animation: bounce-vertical 2s infinite;
+  /* transform: translateX(-50%) removed, animation handles its own transforms if needed */
 }
 
 .scroll-arrow-icon {
@@ -860,18 +864,5 @@ a:hover {
 
   .hero-btns .btn {
     width: 100%;
-  }
-
-  .scroll-down {
-    width: 30px; /* Match icon width */
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    transform: none; /* Remove previous transform */
-    /* The animation 'bounce-vertical' also uses transform. 
-       If it's purely vertical, it might be okay.
-       If it also has translateX components, it would need adjustment or removal here.
-       Assuming 'bounce-vertical' is purely translateY. */
   }
 }
