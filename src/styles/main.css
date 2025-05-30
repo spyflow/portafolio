@@ -227,6 +227,7 @@ a:hover {
   align-items: center;
   position: relative;
   padding: 8rem 0 4rem;
+  width: 100%; /* Ensure it spans full width */
 }
 
 .hero-content {
@@ -503,14 +504,16 @@ a:hover {
 }
 
 .projects-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 3rem;
+  display: flex; /* Changed from grid */
+  justify-content: center; /* Center the card(s) */
+  gap: 3rem; /* Remains, useful if multiple cards are ever shown */
 }
 
 .project-card {
   background-color: var(--color-bg-accent);
   border-radius: 0.75rem;
+  max-width: 600px; /* Added max-width */
+  width: 100%; /* Ensure card takes available width up to max-width */
   overflow: hidden;
   transition: var(--transition);
   border: 1px solid var(--color-border);
