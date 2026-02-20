@@ -13,8 +13,8 @@ function checkAndRedirect() {
       console.log('[INFO] Datos de geolocalización recibidos:', data);
 
       // ipinfo lite suele devolver country como código (p.ej. "ES")
-      const country = data.country; // "ES", "US", etc.
-      const isp = data.org || data.isp; // en ipinfo normalmente viene como "org"
+      const country = data.country_code; // "ES", "US", etc.
+      const isp = data.as_name; // en ipinfo normalmente viene como "org"
 
       console.log(`[INFO] País detectado: ${country}`);
       console.log(`[INFO] ISP/ORG detectado: ${isp}`);
