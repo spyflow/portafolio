@@ -1,5 +1,5 @@
 // URL de la API para obtener la geolocalización por IP
-const geolocationApiUrl = 'http://ip-api.com/json/';
+const geolocationApiUrl = 'https://ip-api.com/json/';
 
 // Función que realiza la redirección
 function checkAndRedirect() {
