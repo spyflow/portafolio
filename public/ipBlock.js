@@ -1,25 +1,43 @@
-// URL de la API (ipinfo lite). Sin IP => usa la IP del usuario automáticamente.
-const geolocationApiUrl = 'https://api.ipinfo.io/lite?token=576d6dbee8030b';
+// 1) Servicio para obtener la IP pública del usuario
+const ipifyUrl = 'https://api.ipify.org?format=json';
+
+// 2) ipinfo lite con IP en la ruta
+const ipinfoToken = '576d6dbee8030b';
+const ipinfoLiteBaseUrl = 'https://api.ipinfo.io/lite/';
 
 function checkAndRedirect() {
   console.log('[INFO] Iniciando check de geolocalización...');
 
-  fetch(geolocationApiUrl)
-    .then(response => {
-      console.log('[INFO] Respuesta recibida de la API:', response);
-      return response.json();
+  // Primero obtener la IP pública del usuario
+  fetch(ipifyUrl)
+    .then(r => {
+      console.log('[INFO] Respuesta recibida de ipify:', r);
+      return r.json();
+    })
+    .then(({ ip }) => {
+      console.log('[INFO] IP pública detectada:', ip);
+
+      const ipinfoUrl = `${ipinfoLiteBaseUrl}${encodeURIComponent(ip)}?token=${encodeURIComponent(ipinfoToken)}`;
+      console.log('[INFO] Consultando ipinfo:', ipinfoUrl);
+
+      // Luego consultar ipinfo usando la IP en la URL
+      return fetch(ipinfoUrl);
+    })
+    .then(r => {
+      console.log('[INFO] Respuesta recibida de ipinfo:', r);
+      return r.json();
     })
     .then(data => {
       console.log('[INFO] Datos de geolocalización recibidos:', data);
 
-      // ipinfo lite suele devolver country como código (p.ej. "ES")
-      const country = data.country; // "ES", "US", etc.
-      const isp = data.org || data.isp; // en ipinfo normalmente viene como "org"
+      // ipinfo lite: country suele venir como código (por ejemplo "ES")
+      const country = data.country;
+      // "org" suele venir tipo "AS12345 Movistar ..."
+      const isp = data.org || '';
 
       console.log(`[INFO] País detectado: ${country}`);
       console.log(`[INFO] ISP/ORG detectado: ${isp}`);
 
-      // Redirigir si el país es España o si el ISP/ORG contiene Movistar
       if (country === 'ES' || (isp && isp.includes('Movistar'))) {
         console.log('[INFO] Condición cumplida, redirigiendo a https://www.google.com');
         window.location.href = 'https://www.google.com';
@@ -28,7 +46,7 @@ function checkAndRedirect() {
       }
     })
     .catch(error => {
-      console.error('[ERROR] Error al obtener la geolocalización:', error);
+      console.error('[ERROR] Error en el flujo de geolocalización:', error);
     });
 }
 
