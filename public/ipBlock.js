@@ -1,11 +1,9 @@
-// URL de la API para obtener la geolocalización por IP
-const geolocationApiUrl = 'https://ip-api.com/json/';
+// URL de la API (ipinfo lite). Sin IP => usa la IP del usuario automáticamente.
+const geolocationApiUrl = 'https://api.ipinfo.io/lite?token=576d6dbee8030b';
 
-// Función que realiza la redirección
 function checkAndRedirect() {
   console.log('[INFO] Iniciando check de geolocalización...');
 
-  // Hacer una solicitud GET a la API de geolocalización
   fetch(geolocationApiUrl)
     .then(response => {
       console.log('[INFO] Respuesta recibida de la API:', response);
@@ -14,17 +12,17 @@ function checkAndRedirect() {
     .then(data => {
       console.log('[INFO] Datos de geolocalización recibidos:', data);
 
-      // Verifica si la IP es de España o si es Movistar
-      const country = data.country; // País de la IP
-      const isp = data.isp; // Proveedor de servicio de internet
+      // ipinfo lite suele devolver country como código (p.ej. "ES")
+      const country = data.country; // "ES", "US", etc.
+      const isp = data.org || data.isp; // en ipinfo normalmente viene como "org"
 
       console.log(`[INFO] País detectado: ${country}`);
-      console.log(`[INFO] ISP detectado: ${isp}`);
+      console.log(`[INFO] ISP/ORG detectado: ${isp}`);
 
-      // Redirigir si el país es España o si el ISP es Movistar
-      if (country === 'Spain' || (isp && isp.includes('Movistar'))) {
+      // Redirigir si el país es España o si el ISP/ORG contiene Movistar
+      if (country === 'ES' || (isp && isp.includes('Movistar'))) {
         console.log('[INFO] Condición cumplida, redirigiendo a https://www.google.com');
-        window.location.href = 'https://www.google.com'; // Cambia esta URL por la de destino
+        window.location.href = 'https://www.google.com';
       } else {
         console.log('[INFO] Condición no cumplida, no se realiza redirección.');
       }
@@ -34,7 +32,6 @@ function checkAndRedirect() {
     });
 }
 
-// Ejecutar la función al cargar la página
 window.onload = () => {
   console.log('[INFO] Página cargada, ejecutando checkAndRedirect...');
   checkAndRedirect();
